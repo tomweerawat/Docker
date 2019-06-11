@@ -17,7 +17,7 @@ mysql_server:
   environment:
     - MYSQL_ROOT_PASSWORD=w@rp
 
-phpmyadmin:
+myadmin_server:
   build: myadmin/
   links: 
     - mysql_server:mysql
