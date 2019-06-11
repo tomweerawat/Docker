@@ -18,11 +18,14 @@ mysql_server:
     - MYSQL_ROOT_PASSWORD=w@rp
 
 myadmin_server:
-  image: phpmyadmin/phpmyadmin
+  build: myadmin/
   links: 
     - mysql_server:mysql
   ports:
     - 8888:80
   restart: always  
   container_name: myadmin_server   
-
+  environment:
+    MYSQL_USER: root
+    MYSQL_PASSWORD: w@rp
+    MYSQL_ROOT_PASSWORD: w@rp    
