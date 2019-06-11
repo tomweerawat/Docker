@@ -16,14 +16,16 @@ mysql_server:
   container_name: mysql_server
   environment:
     - MYSQL_ROOT_PASSWORD=w@rp
+
 phpmyadmin:
-        build: myadmin/
-        links: 
-            - mysql_server:mysql_server
-        ports:
-            - 8081:80
-        container_name: myphpmyadmin_server    
-        environment:
-            MYSQL_USER: root
-            MYSQL_PASSWORD: w@rp
-            MYSQL_ROOT_PASSWORD: w@rp    
+  build: myadmin/
+  links: 
+    - mysql_server:mysql
+  ports:
+    - 8081:80
+  container_name: myadmin_server   
+  image: phpmyadmin/phpmyadmin 
+  environment:
+    - MYSQL_USER: root
+    - MYSQL_PASSWORD: w@rp
+    - MYSQL_ROOT_PASSWORD: w@rp    
