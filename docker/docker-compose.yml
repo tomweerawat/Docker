@@ -18,7 +18,7 @@ mysql_server:
     - MYSQL_ROOT_PASSWORD=w@rp
 
 myadmin_server:
-  mage: phpmyadmin/phpmyadmin
+  image: phpmyadmin/phpmyadmin
   links: 
     - mysql_server:mysql
   ports:
