@@ -3,6 +3,7 @@
 #remove old container
 docker rm -f web_server
 docker rm -f mysql_server
+docker rm -f myadmin_server
 docker-compose rm
 
 #create container
@@ -12,6 +13,8 @@ docker-compose up -d mysql_server
 docker-compose build web_server
 docker-compose up -d web_server
 
+docker-compose build myadmin_server
+docker-compose up -d myadmin_server
 sleep 5
 
 # run script in mysql server for create and import data to db
