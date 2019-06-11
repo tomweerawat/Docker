@@ -26,6 +26,6 @@ phpmyadmin:
   container_name: myadmin_server   
   image: phpmyadmin/phpmyadmin 
   environment:
-    - MYSQL_USER: root
-    - MYSQL_PASSWORD: w@rp
-    - MYSQL_ROOT_PASSWORD: w@rp    
+    MYSQL_USER: root
+    MYSQL_PASSWORD: w@rp
+    MYSQL_ROOT_PASSWORD: w@rp    
