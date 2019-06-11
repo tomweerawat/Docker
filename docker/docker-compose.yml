@@ -24,7 +24,6 @@ phpmyadmin:
   ports:
     - 8081:80
   container_name: myadmin_server   
-  image: phpmyadmin/phpmyadmin 
   environment:
     MYSQL_USER: root
     MYSQL_PASSWORD: w@rp
